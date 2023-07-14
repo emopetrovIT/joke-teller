@@ -8,7 +8,10 @@ function toggleButton() {
 
 // Passing Joke to VoiceRSS API
 function speecherTellsTheJoke(joke) {
-  const jokeString = joke.trim().replace();
+  console.log(joke);
+
+  // string url encoded
+  const jokeString = joke.trim().replace(/ /g, '%20');
 
   VoiceRSS.speech({
     // Normally, don't write out API Keys like this, but an exception made here because it's free.
