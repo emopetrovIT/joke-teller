@@ -1,7 +1,6 @@
 const button = document.getElementById('button');
 const audioElement = document.getElementById('audio');
 
-// Disable/Enable Button
 function toggleButton() {
   button.disabled = !button.disabled;
 }
@@ -49,6 +48,5 @@ async function getJokes() {
   }
 }
 
-// Event Listeners
 button.addEventListener('click', getJokes);
 audioElement.addEventListener('ended', toggleButton);
